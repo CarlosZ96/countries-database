@@ -1,0 +1,40 @@
+.categorie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: row;
+  border: 5px solid #fff;
+  width: 50%;
+  border-radius: 6px;
+  padding: 5px;
+}
+
+.search {
+  background-color: #4369b2;
+  width: 100%;
+  border: none;
+  padding: 5px;
+  color: #fff;
+}
+
+.search-icon {
+  width: 25px;
+  height: 25px;
+}
+
+.continents-container {
+  display: grid;
+  grid-template-columns: 20% 20% 20%;
+  width: 100%;
+  justify-content: center;
+}
+
+.continent-map {
+  width: 250px;
+  height: 250px;
+}
