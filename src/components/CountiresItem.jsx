@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { getCountires } from '../redux/countries/countrieSlice';
 import { nanoid } from 'nanoid';
+import '../stylesheets/countries.css';
 
 const CountiresItem = () => {
   const dispatch = useDispatch();
@@ -21,14 +22,16 @@ const CountiresItem = () => {
   )
   console.log(filter);
   return (
-    <div className='countires-container'>
+    <div className="countires-container">
       {
         filter.map(
           (countrie) => (
             <div key={nanoid()} className="countrie-card">
-              <img src={countrie.flags} alt={countrie.alt} />
+              <div className="flag-container">
+                <img src={countrie.flags} alt={countrie.alt} className="flag" />
+              </div>
               <h1>{countrie.name}</h1>
-              <h3>Population: {countrie.population/1000000}</h3>
+              <h3>Population: {countrie.population / 1000000}</h3>
             </div>
           )
         )
