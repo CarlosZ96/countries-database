@@ -1,15 +1,10 @@
 import './App.css';
-import React, { useEffect } from 'react';
-import { Route, Routes, NavLink } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import { getCountires } from './redux/countries/countrieSlice.js';
-import CountiresItem from './components/CountiresItem';
+import { Route, Routes } from 'react-router-dom';
+import MainPage from './components/MainPage';
+import CountiresDetails from './components/CountiresDetails';
+import Continents from './components/Continents';
 
 function App() {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getCountires());
-  }, [dispatch]);
   return (
     <div className="App">
       <header>
@@ -17,8 +12,10 @@ function App() {
         <h1>Countries Databases</h1>
       </header>
       <Routes>
-          <Route path="/" element={<CountiresItem />} />
-        </Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/Continents" element={<Continents />} />
+        <Route path="/CountiresDetails" element={<CountiresDetails />} />
+      </Routes>
     </div>
   );
 }
