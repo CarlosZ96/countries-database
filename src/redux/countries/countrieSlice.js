@@ -2,30 +2,36 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const options = {
-  method: 'GET',
-  url: 'https://countries-cities.p.rapidapi.com/location/country/list',
-  headers: {
-    'X-RapidAPI-Key': 'f8c33a76f6msh61f491b42c62ff8p1262e2jsn1f5a4e9a016a',
-    'X-RapidAPI-Host': 'countries-cities.p.rapidapi.com'
-  }
-};
 
 export const getCountires = createAsyncThunk(
   'countries/getCountries',
   async (arg, { rejectWithValue }) => {
-    const options = {
-      method: 'GET',
-      url: 'https://countries-cities.p.rapidapi.com/location/country/list',
-      headers: {
-        'X-RapidAPI-Key': 'f8c33a76f6msh61f491b42c62ff8p1262e2jsn1f5a4e9a016a',
-        'X-RapidAPI-Host': 'countries-cities.p.rapidapi.com'
-      }
-    };
-
     try {
-      const response = await axios.request(options);
-      console.log(response.data);
+      const response = await axios.get('https://restcountries.com/v3.1/all');
+      const apiCountries = response.data;
+      const countriesFilter = [];
+      apiCountries.forEach((countrie) => {
+        const name = countrie.name.common;
+        const capital = countrie.capital ? countrie.capital[0] : countrie.capital;
+        const continent = countrie.continents ? countrie.continents[0] : countrie.continents;
+        const population = countrie.population;
+        const area = countrie.area;
+        const flags = countrie.flags.svg;
+        const alt = countrie.flags.alt;
+        countriesFilter.push(
+          {
+            area: area,
+            capital: capital,
+            continent: continent,
+            population: population,
+            name: name,
+            flags: flags,
+            alt: alt,
+          },
+        );
+      });
+      console.log(countriesFilter[0].flags.svg);
+      return countriesFilter;
     } catch (error) {
       return rejectWithValue(error.response);
     }

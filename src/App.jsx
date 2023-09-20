@@ -7,7 +7,6 @@ import CountiresItem from './components/CountiresItem';
 
 function App() {
   const dispatch = useDispatch();
-  const countires = useSelector((store) => store.countries);
   useEffect(() => {
     dispatch(getCountires());
   }, [dispatch]);
