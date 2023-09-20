@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-const Continents = () => {
-  return (
-    <div>Continents</div>
-  )
+function Continents() {
+  return <div>Continents</div>;
 }
 
 export default Continents;

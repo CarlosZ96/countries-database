@@ -1,5 +1,5 @@
 import React from 'react';
-import CountiresItem from './CountiresItem.jsx';
+import CountiresItem from './CountiresItem';
 import Search from '../img/lupa.png';
 import africa from '../img/africa.png';
 import america from '../img/america.png';
@@ -8,7 +8,7 @@ import europe from '../img/europa.png';
 import oceania from '../img/australia.png';
 import '../stylesheets/mainpage.css';
 
-const MainPage = () => {
+function MainPage() {
   return (
     <div>
       <CountiresItem />
@@ -42,7 +42,7 @@ const MainPage = () => {
         </section>
       </div>
     </div>
-  )
+  );
 }
 
 export default MainPage;

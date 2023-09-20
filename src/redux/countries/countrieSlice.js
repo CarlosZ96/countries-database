@@ -2,7 +2,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-
 export const getCountires = createAsyncThunk(
   'countries/getCountries',
   async (arg, { rejectWithValue }) => {
@@ -20,13 +19,13 @@ export const getCountires = createAsyncThunk(
         const alt = countrie.flags.alt;
         countriesFilter.push(
           {
-            area: area,
-            capital: capital,
-            continent: continent,
-            population: population,
-            name: name,
-            flags: flags,
-            alt: alt,
+            area,
+            capital,
+            continent,
+            population,
+            name,
+            flags,
+            alt,
           },
         );
       });
