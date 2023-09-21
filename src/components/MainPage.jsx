@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CountiresItem from './CountiresItem';
 import Search from '../img/lupa.png';
 import africa from '../img/africa.png';
@@ -10,21 +10,21 @@ import '../stylesheets/mainpage.css';
 import CountryDetails from './CountryDetails';
 
 function MainPage() {
-  let Name = '';
+  const [nameValue, setNameValue] = useState('');
   const getName = (e) => {
-    if (e.key === 'Enter') {
-      Name = e.target.value;
-    }
+    const capitalizedInput = e.target.value.charAt(0).toUpperCase() + e.target.value.slice(1);
+    setNameValue(capitalizedInput);
+    console.log(nameValue);
   };
 
   return (
     <div>
       <CountiresItem />
-      <CountryDetails Name={Name} />
+      <CountryDetails Name={nameValue} />
       <div className="categorie">
         <div className="search-container">
-          <input onChange={getName} type="text" className="search" placeholder="Search country by name.." />
-          <img src={Search} alt="search" className="search-icon" />
+          <input type="text" onChange={getName} value={nameValue} className="search" placeholder="Search country by name.." />
+          <button type="button"><img src={Search} alt="search" className="search-icon" /></button>
         </div>
         <section className="continents-container">
           <div className="continent">
