@@ -25,7 +25,7 @@ function DetailsPage() {
               </div>
               <h1>
                 {countrie.name}
-                {' '}
+                {'  '}
                 information:
               </h1>
               <h2>
