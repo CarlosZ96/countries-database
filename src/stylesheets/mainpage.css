@@ -1,3 +1,9 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 .categorie {
   display: flex;
   flex-direction: column;
@@ -20,6 +26,7 @@
   border: none;
   padding: 5px;
   color: #fff;
+  outline: none;
 }
 
 .search-icon {
@@ -28,13 +35,19 @@
 }
 
 .continents-container {
-  display: grid;
-  grid-template-columns: 20% 20% 20%;
+  display: flex;
+  flex-direction: row;
   width: 100%;
   justify-content: center;
+  gap: 5px;
+  margin: 42px 10px 42px 10px;
 }
 
 .continent-map {
   width: 250px;
   height: 250px;
+}
+
+.hidecountry {
+  display: none;
 }

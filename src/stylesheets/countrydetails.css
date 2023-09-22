@@ -1,0 +1,48 @@
+.country-containerd {
+  display: grid;
+  grid-template-columns: 25% 25% 25%;
+  width: 80%;
+  justify-content: center;
+  margin-top: 50px;
+  margin-right: 10%;
+  margin-left: 10%;
+  gap: 10px;
+}
+
+.country-name {
+  width: 60%;
+}
+
+.name-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.details-button {
+  background-color: #2b4473;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  border-color: #fff;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+.country-card {
+  width: 100%;
+}
+
+.flag-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flag {
+  max-width: 95%;
+  max-height: 70%;
+}

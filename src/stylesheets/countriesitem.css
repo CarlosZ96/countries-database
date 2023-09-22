@@ -1,0 +1,28 @@
+.country-container {
+  display: grid;
+  grid-template-columns: 20% 20% 20%;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.country-card {
+  width: 40%;
+}
+
+.flag-container {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flag {
+  max-width: 20%;
+  max-height: 20%;
+  min-height: 140px;
+  border-radius: 40px;
+}
+
+.country-population {
+  width: 60%;
+}

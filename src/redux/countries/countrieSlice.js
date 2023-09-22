@@ -29,7 +29,6 @@ export const getCountires = createAsyncThunk(
           },
         );
       });
-      console.log(countriesFilter[0].flags.svg);
       return countriesFilter;
     } catch (error) {
       return rejectWithValue(error.response);
