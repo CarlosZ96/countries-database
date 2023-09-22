@@ -18,8 +18,8 @@ function MainPage() {
 
   return (
     <div className="main-container">
-      <CountiresItem CountryClas={nameValue.trim() === '' ? 'country-container' : 'hidecountry'} />
-      <CountryDetails Name={nameValue} clasN={nameValue.trim() !== '' ? 'country-containerd' : 'hidecountry'} />
+      <CountiresItem CountryClas={nameValue.trim() === '' ? 'country-container' : 'hide'} />
+      <CountryDetails Name={nameValue} clasN={nameValue.trim() !== '' ? 'country-containerd' : 'hide'} />
       <div className="categorie">
         <div className="search-container">
           <input type="text" onChange={getName} value={nameValue} className="search" placeholder="Search country by name.." />
