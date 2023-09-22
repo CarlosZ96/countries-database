@@ -29,6 +29,10 @@
   outline: none;
 }
 
+.search::placeholder {
+  color: #ffffff64;
+}
+
 .search-icon {
   width: 25px;
   height: 25px;

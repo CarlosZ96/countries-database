@@ -20,6 +20,9 @@ function CountiresItem({ CountryClas }) {
       || acountrie.name === 'Mexico'
       || acountrie.name === 'Colombia',
   );
+
+  filter.sort((a, b) => b.population - a.population);
+
   return (
     <div className={CountryClas}>
       {

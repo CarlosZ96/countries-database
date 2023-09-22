@@ -40,6 +40,18 @@ const countrieSlice = createSlice({
   name: 'countries',
   initialState: {
     countries: [],
+    countryfilter: [],
+  },
+  reducers: {
+    filtercountries: (state, action) => {
+      const countryname = action.payload;
+      const filteredcountry = state.countries.filter(
+        (acountrie) => acountrie.name.toLowerCase().includes(countryname.toLowerCase()),
+      );
+      return {
+        countryfilter: filteredcountry,
+      };
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(getCountires.fulfilled, (state, action) => {
@@ -48,4 +60,5 @@ const countrieSlice = createSlice({
   },
 });
 
+export const { filtercountries } = countrieSlice.actions;
 export default countrieSlice.reducer;

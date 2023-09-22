@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { nanoid } from '@reduxjs/toolkit';
-import { getCountires } from '../redux/countries/countrieSlice';
+import { filtercountries, getCountires } from '../redux/countries/countrieSlice';
 import '../stylesheets/countrydetails.css';
 
 function CountryDetails({ Name, clasN }) {
@@ -11,9 +12,14 @@ function CountryDetails({ Name, clasN }) {
   useEffect(() => {
     dispatch(getCountires());
   }, [dispatch]);
+
   const filterName = Name.trim() !== '' ? countries.filter(
     (acountrie) => acountrie.name.toLowerCase().includes(Name.toLowerCase()),
   ) : [];
+
+  const filterCountry = (countryName) => {
+    dispatch(filtercountries(countryName));
+  };
 
   return (
     <div className={clasN}>
@@ -26,7 +32,17 @@ function CountryDetails({ Name, clasN }) {
               </div>
               <div className="name-container">
                 <h1 className="country-name">{countrie.name}</h1>
-                <button type="button" className="details-button">+</button>
+                <NavLink to="/Details">
+                  <button
+                    type="button"
+                    className="details-button"
+                    onClick={() => {
+                      filterCountry(countrie.name);
+                    }}
+                  >
+                    +
+                  </button>
+                </NavLink>
               </div>
               <h2>
                 Continent:
