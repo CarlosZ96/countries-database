@@ -14,17 +14,16 @@ function MainPage() {
   const getName = (e) => {
     const capitalizedInput = e.target.value.charAt(0).toUpperCase() + e.target.value.slice(1);
     setNameValue(capitalizedInput);
-    console.log(nameValue);
   };
 
   return (
-    <div>
-      <CountiresItem />
-      <CountryDetails Name={nameValue} />
+    <div className="main-container">
+      <CountiresItem CountryClas={nameValue.trim() === '' ? 'country-container' : 'hidecountry'} />
+      <CountryDetails Name={nameValue} clasN={nameValue.trim() !== '' ? 'country-containerd' : 'hidecountry'} />
       <div className="categorie">
         <div className="search-container">
           <input type="text" onChange={getName} value={nameValue} className="search" placeholder="Search country by name.." />
-          <button type="button"><img src={Search} alt="search" className="search-icon" /></button>
+          <img src={Search} alt="search" className="search-icon" />
         </div>
         <section className="continents-container">
           <div className="continent">

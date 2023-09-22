@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { nanoid } from 'nanoid';
 import { getCountires } from '../redux/countries/countrieSlice';
-import '../stylesheets/countries.css';
+import '../stylesheets/countriesitem.css';
 
-function CountiresItem() {
+function CountiresItem({ CountryClas }) {
   const dispatch = useDispatch();
   const { countries } = useSelector((store) => store.countries);
   useEffect(() => {
@@ -20,7 +21,7 @@ function CountiresItem() {
       || acountrie.name === 'Colombia',
   );
   return (
-    <div className="countires-container">
+    <div className={CountryClas}>
       {
         filter.map(
           (countrie) => (
@@ -28,8 +29,8 @@ function CountiresItem() {
               <div className="flag-container">
                 <img src={countrie.flags} alt={countrie.alt} className="flag" />
               </div>
-              <h1>{countrie.name}</h1>
-              <h3>
+              <h1 className="country-name">{countrie.name}</h1>
+              <h3 className="country-population">
                 Population:
                 {countrie.population / 1000000}
               </h3>
@@ -40,5 +41,9 @@ function CountiresItem() {
     </div>
   );
 }
+
+CountiresItem.propTypes = {
+  CountryClas: PropTypes.string.isRequired,
+};
 
 export default CountiresItem;
