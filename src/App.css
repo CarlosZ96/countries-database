@@ -8,7 +8,7 @@
   width: 100%;
 }
 
-header{
+header {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -16,12 +16,12 @@ header{
   background-color: #2b4473a6;
 }
 
-header img{
- margin: 10px 0 20px 4%;
+header img {
+  margin: 10px 0 20px 4%;
 }
 
-header h1{
+header h1 {
   margin: 10px 0 20px 2%;
-  font-size: 300hv;
+  font-size: 6vh;
   font-weight: bold;
- }
+}

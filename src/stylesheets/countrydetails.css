@@ -18,10 +18,11 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .details-button {
-  background-color: #2B4473;
+  background-color: #2b4473;
   border-radius: 50%;
   width: 25px;
   height: 25px;
@@ -44,8 +45,4 @@
 .flag {
   max-width: 95%;
   max-height: 70%;
-}
-
-.name-container {
-  width: 100%;
 }
