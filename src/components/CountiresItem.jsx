@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 import { nanoid } from 'nanoid';
-import { getCountires } from '../redux/countries/countrieSlice';
+import { filtercountries, getCountires } from '../redux/countries/countrieSlice';
 import '../stylesheets/countriesitem.css';
 
 function CountiresItem({ CountryClas }) {
@@ -12,15 +13,19 @@ function CountiresItem({ CountryClas }) {
     dispatch(getCountires());
   }, [dispatch]);
 
+  const filterCountry = (countryName) => {
+    dispatch(filtercountries(countryName));
+  };
+
   const filter = countries.filter(
-    (acountrie) => acountrie.name === 'United States'
+    (acountrie) => acountrie.name === 'Canada'
       || acountrie.name === 'United Kingdom'
-      || acountrie.name === 'China'
+      || acountrie.name === 'Japan'
       || acountrie.name === 'Australia'
       || acountrie.name === 'Mexico'
       || acountrie.name === 'Colombia',
   );
-
+  console.log(filter);
   return (
     <div className={CountryClas}>
       {
@@ -30,7 +35,20 @@ function CountiresItem({ CountryClas }) {
               <div className="flag-container">
                 <img src={countrie.flags} alt={countrie.alt} className="flag" />
               </div>
-              <h1 className="country-name">{countrie.name}</h1>
+              <div>
+                <h1 className="country-name">{countrie.name}</h1>
+                <NavLink to="/Details">
+                  <button
+                    type="button"
+                    className="details-button"
+                    onClick={() => {
+                      filterCountry(countrie.name);
+                    }}
+                  >
+                    +
+                  </button>
+                </NavLink>
+              </div>
               <h3 className="country-population">
                 Population:
                 {countrie.population / 1000000}

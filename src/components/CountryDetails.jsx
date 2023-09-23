@@ -44,22 +44,6 @@ function CountryDetails({ Name, clasN }) {
                   </button>
                 </NavLink>
               </div>
-              <h2>
-                Continent:
-                {countrie.continent}
-              </h2>
-              <h2>
-                Capital:
-                {countrie.capital}
-              </h2>
-              <h2>
-                Area:
-                {countrie.area}
-              </h2>
-              <h3>
-                Population:
-                {countrie.population / 1000000}
-              </h3>
             </div>
           ),
         )
