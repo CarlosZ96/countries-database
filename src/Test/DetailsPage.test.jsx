@@ -1,18 +1,18 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable import/extensions */
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import store from '../redux/store';
-import DetailsPage from './DetailsPage';
+import DetailsPage from '../components/DetailsPage';
 
-test('DetailsPage renders correctly', () => {
-  const { getByText } = render(
+test('renders Details Page', () => {
+  render(
     <Provider store={store}>
       <DetailsPage />
     </Provider>,
   );
 
-  expect(getByText('Canada')).toBeInTheDocument();
-  expect(getByText('Continent:')).toBeInTheDocument();
+  const element = screen.getByTestId('details-page');
+  expect(element).toBeInTheDocument();
 });

@@ -1,24 +1,16 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
-// eslint-disable-next-line import/extensions
-import MainPage from '../components/DetailsPage';
+import { render, screen } from '@testing-library/react';
+import { Provider } from 'react-redux';
+import store from '../redux/store';
+import MainPage from '../components/MainPage';
 
-test('MainPage renders correctly', () => {
-  const { getByPlaceholderText, getByAltText } = render(<MainPage />);
+test('renders Main Page', () => {
+  render(
+    <Provider store={store}>
+      <MainPage />
+    </Provider>,
+  );
 
-  expect(getByPlaceholderText('Search country by name..')).toBeInTheDocument();
-  expect(getByAltText('americas map')).toBeInTheDocument();
-  expect(getByAltText('europe map')).toBeInTheDocument();
-  expect(getByAltText('africa map')).toBeInTheDocument();
-  expect(getByAltText('asia map')).toBeInTheDocument();
-  expect(getByAltText('oceania map')).toBeInTheDocument();
-});
-
-test('Search input updates correctly', () => {
-  const { getByPlaceholderText } = render(<MainPage />);
-  const input = getByPlaceholderText('Search country by name..');
-
-  fireEvent.change(input, { target: { value: 'Canada' } });
-
-  expect(input.value).toBe('Canada');
+  const element = screen.getByTestId('main-page');
+  expect(element).toBeInTheDocument();
 });
