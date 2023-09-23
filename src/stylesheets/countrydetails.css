@@ -37,14 +37,15 @@
   width: 100%;
 }
 
-.flag-container {
+.flag-containerp {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.flag {
+.flagp {
   max-width: 95%;
   max-height: 70%;
+  border-radius: 20px;
 }

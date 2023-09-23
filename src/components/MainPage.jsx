@@ -18,13 +18,7 @@ function MainPage() {
 
   return (
     <div className="main-container" data-testid="main-page">
-      <CountiresItem CountryClas={nameValue.trim() === '' ? 'country-container' : 'hide'} />
-      <CountryDetails Name={nameValue} clasN={nameValue.trim() !== '' ? 'country-containerd' : 'hide'} />
       <div className="categorie">
-        <div className="search-container">
-          <input type="text" onChange={getName} value={nameValue} className="search" placeholder="Search country by name.." />
-          <img src={Search} alt="search" className="search-icon" />
-        </div>
         <section className="continents-container">
           <div className="continent">
             <img src={america} className="continent-map" alt="americas map" />
@@ -62,7 +56,13 @@ function MainPage() {
             </div>
           </div>
         </section>
+        <div className="search-container">
+          <input type="text" onChange={getName} value={nameValue} className="search" placeholder="Search country by name.." />
+          <img src={Search} alt="search" className="search-icon" />
+        </div>
       </div>
+      <CountiresItem CountryClas={nameValue.trim() === '' ? 'country-container' : 'hide'} />
+      <CountryDetails Name={nameValue} clasN={nameValue.trim() !== '' ? 'country-containerd' : 'hide'} />
     </div>
   );
 }

@@ -28,8 +28,8 @@ function CountryDetails({ Name, clasN }) {
         filterName.map(
           (countrie) => (
             <div key={nanoid()} className="country-card">
-              <div className="flag-container">
-                <img src={countrie.flags} alt={countrie.alt} className="flag" />
+              <div className="flag-containerp">
+                <img src={countrie.flags} alt={countrie.alt} className="flagp" />
               </div>
               <div className="name-container">
                 <h1 className="country-name">{countrie.name}</h1>

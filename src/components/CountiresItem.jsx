@@ -25,7 +25,6 @@ function CountiresItem({ CountryClas }) {
       || acountrie.name === 'Mexico'
       || acountrie.name === 'Colombia',
   );
-  console.log(filter);
   return (
     // eslint-disable-next-line jsx-quotes
     <div className={CountryClas} data-testid='countries-item'>
@@ -34,24 +33,24 @@ function CountiresItem({ CountryClas }) {
           (countrie) => (
             <div key={nanoid()} className="countrie-card">
               <div className="flag-container">
-                <img src={countrie.flags} alt={countrie.alt} className="flag" />
-              </div>
-              <div>
-                <h1 className="country-name">{countrie.name}</h1>
                 <NavLink to="/Details">
                   <button
                     type="button"
-                    className="details-button"
+                    className="flag-container"
                     onClick={() => {
                       filterCountry(countrie.name);
                     }}
                   >
-                    +
+                    <img src={countrie.flags} alt={countrie.alt} className="flag" />
                   </button>
                 </NavLink>
               </div>
+              <div className="-container">
+                <h1 className="country-name">{countrie.name}</h1>
+              </div>
               <h3 className="country-population">
                 Population:
+                {'  '}
                 {countrie.population / 1000000}
               </h3>
             </div>
