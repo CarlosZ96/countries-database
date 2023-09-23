@@ -22,7 +22,8 @@ function CountryDetails({ Name, clasN }) {
   };
 
   return (
-    <div className={clasN}>
+    // eslint-disable-next-line jsx-quotes
+    <div className={clasN} data-testid='country-details'>
       {
         filterName.map(
           (countrie) => (

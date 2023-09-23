@@ -13,7 +13,8 @@ function DetailsPage() {
     dispatch(getCountires());
   }, [dispatch]);
   return (
-    <div>
+    // eslint-disable-next-line jsx-quotes
+    <div data-testid='details-page'>
       {
         countries.map(
           (countrie) => (

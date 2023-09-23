@@ -27,7 +27,8 @@ function CountiresItem({ CountryClas }) {
   );
   console.log(filter);
   return (
-    <div className={CountryClas}>
+    // eslint-disable-next-line jsx-quotes
+    <div className={CountryClas} data-testid='countries-item'>
       {
         filter.map(
           (countrie) => (

@@ -17,7 +17,7 @@ function MainPage() {
   };
 
   return (
-    <div className="main-container">
+    <div className="main-container" data-testid="main-page">
       <CountiresItem CountryClas={nameValue.trim() === '' ? 'country-container' : 'hide'} />
       <CountryDetails Name={nameValue} clasN={nameValue.trim() !== '' ? 'country-containerd' : 'hide'} />
       <div className="categorie">
