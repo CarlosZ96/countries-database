@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import CountiresItem from './CountiresItem';
 import Search from '../img/lupa.png';
 import africa from '../img/africa.png';
@@ -55,7 +56,9 @@ function MainPage() {
             </div>
           </div>
           <div className="continent">
-            <img src={oceania} className="continent-map" alt="oceania map" />
+            <NavLink to="/Continents">
+              <img src={oceania} className="continent-map" alt="oceania map" />
+            </NavLink>
             <div className="continent-txt">
               <h2>Oceania</h2>
               <h4>Population: 41.117.000</h4>
