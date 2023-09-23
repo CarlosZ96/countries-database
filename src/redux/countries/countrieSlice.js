@@ -41,6 +41,7 @@ const countrieSlice = createSlice({
   initialState: {
     countries: [],
     countryfilter: [],
+    continetfilter: [],
   },
   reducers: {
     filtercountries: (state, action) => {
