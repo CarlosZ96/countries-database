@@ -1,7 +1,6 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import MainPage from './components/MainPage';
-import Continents from './components/Continents';
 import DetailsPage from './components/DetailsPage';
 
 function App() {
@@ -13,7 +12,6 @@ function App() {
       </header>
       <Routes>
         <Route path="/" element={<MainPage />} />
-        <Route path="/Continents" element={<Continents />} />
         <Route path="/Details" element={<DetailsPage />} />
       </Routes>
     </div>

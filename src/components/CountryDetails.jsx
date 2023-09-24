@@ -22,13 +22,14 @@ function CountryDetails({ Name, clasN }) {
   };
 
   return (
-    <div className={clasN}>
+    // eslint-disable-next-line jsx-quotes
+    <div className={clasN} data-testid='country-details'>
       {
         filterName.map(
           (countrie) => (
             <div key={nanoid()} className="country-card">
-              <div className="flag-container">
-                <img src={countrie.flags} alt={countrie.alt} className="flag" />
+              <div className="flag-containerp">
+                <img src={countrie.flags} alt={countrie.alt} className="flagp" />
               </div>
               <div className="name-container">
                 <h1 className="country-name">{countrie.name}</h1>
@@ -44,22 +45,6 @@ function CountryDetails({ Name, clasN }) {
                   </button>
                 </NavLink>
               </div>
-              <h2>
-                Continent:
-                {countrie.continent}
-              </h2>
-              <h2>
-                Capital:
-                {countrie.capital}
-              </h2>
-              <h2>
-                Area:
-                {countrie.area}
-              </h2>
-              <h3>
-                Population:
-                {countrie.population / 1000000}
-              </h3>
             </div>
           ),
         )

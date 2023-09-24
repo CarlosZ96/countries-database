@@ -1,28 +1,49 @@
 .country-container {
   display: grid;
-  grid-template-columns: 20% 20% 20%;
+  grid-template-columns: 30% 30% 30%;
   justify-content: center;
   margin-top: 50px;
 }
 
-.country-card {
-  width: 40%;
+.countrie-card {
+  width: 80%;
 }
 
 .flag-container {
-  width: 40%;
+  width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
 .flag {
-  max-width: 20%;
-  max-height: 20%;
-  min-height: 140px;
+  width: 100%;
+  height: 45%;
+  border-radius: 40px;
+}
+
+.flag:hover {
+  border: 10px solid #2b4473af;
   border-radius: 40px;
 }
 
 .country-population {
   width: 60%;
+}
+
+.name-container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.country-name {
+  width: 100%;
+  border-radius: 5px;
+  margin: 5px 0 5px 0;
+  text-align: justify;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 50px;
 }
