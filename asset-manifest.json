@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.7d52aae7.css",
-    "main.js": "/static/js/main.f0b01931.js",
-    "static/media/europa.png": "/static/media/europa.9d447c545f6b639e9341.png",
-    "static/media/home.png": "/static/media/home.74ff9b2144078683bfb7.png",
-    "static/media/asia.png": "/static/media/asia.8b0f8f0c9bd657529be6.png",
-    "static/media/america.png": "/static/media/america.65a0f7921d4f56e280fb.png",
-    "static/media/africa.png": "/static/media/africa.98e64f3e350f057053c2.png",
-    "static/media/lupa.png": "/static/media/lupa.351828e0ef14ddf5dc73.png",
-    "index.html": "/index.html",
-    "main.7d52aae7.css.map": "/static/css/main.7d52aae7.css.map",
-    "main.f0b01931.js.map": "/static/js/main.f0b01931.js.map"
+    "main.css": "/countries-database/static/css/main.7d52aae7.css",
+    "main.js": "/countries-database/static/js/main.36163da7.js",
+    "static/media/europa.png": "/countries-database/static/media/europa.9d447c545f6b639e9341.png",
+    "static/media/home.png": "/countries-database/static/media/home.74ff9b2144078683bfb7.png",
+    "static/media/asia.png": "/countries-database/static/media/asia.8b0f8f0c9bd657529be6.png",
+    "static/media/america.png": "/countries-database/static/media/america.65a0f7921d4f56e280fb.png",
+    "static/media/africa.png": "/countries-database/static/media/africa.98e64f3e350f057053c2.png",
+    "static/media/lupa.png": "/countries-database/static/media/lupa.351828e0ef14ddf5dc73.png",
+    "index.html": "/countries-database/index.html",
+    "main.7d52aae7.css.map": "/countries-database/static/css/main.7d52aae7.css.map",
+    "main.36163da7.js.map": "/countries-database/static/js/main.36163da7.js.map"
   },
   "entrypoints": [
     "static/css/main.7d52aae7.css",
-    "static/js/main.f0b01931.js"
+    "static/js/main.36163da7.js"
   ]
 }
