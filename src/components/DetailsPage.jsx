@@ -20,7 +20,7 @@ function DetailsPage() {
           (countrie) => (
             <div key={nanoid()} className="country-card">
               <div className="home-container">
-                <NavLink to="/"><img src={home} alt="home" className="home" /></NavLink>
+                <NavLink to="/countries-database/"><img src={home} alt="home" className="home" /></NavLink>
               </div>
               <div className="flag-containerd">
                 <img src={countrie.flags} alt={countrie.alt} className="flagd" />

@@ -11,6 +11,7 @@
 
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
+     - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Install](#install)
@@ -47,7 +48,13 @@ You will create an simplified version of it that allows you to:
 ### Key Features <a name="key-features"></a>
 - **A responsive webpage to present my knowledge, experience and projects in programming.**
 
-<!-- GETTING STARTED -->
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](https://carlosz96.github.io/countries-database/)
+
+Watch the live demo at the following link: 
+https://www.loom.com/share/1d1cc371c6e3462b844c0595da2afda5?sid=6ac88cde-625d-4d7a-a419-3a7fdfba7739
+
 
 ## 💻 Getting Started <a name="getting-started"></a>
 

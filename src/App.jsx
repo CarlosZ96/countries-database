@@ -11,7 +11,7 @@ function App() {
         <h1>Countries Stats</h1>
       </header>
       <Routes>
-        <Route path="/" element={<MainPage />} />
+        <Route path="/countries-database/" element={<MainPage />} />
         <Route path="/Details" element={<DetailsPage />} />
       </Routes>
     </div>
