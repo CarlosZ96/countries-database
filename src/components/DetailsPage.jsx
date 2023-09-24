@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { nanoid } from 'nanoid';
 import { NavLink } from 'react-router-dom';
-import home from '../img/home.png';
+import back from '../img/right-arrow.png';
 import { getCountires } from '../redux/countries/countrieSlice';
 import '../stylesheets/detailspage.css';
 
@@ -19,9 +19,6 @@ function DetailsPage() {
         countries.map(
           (countrie) => (
             <div key={nanoid()} className="country-card">
-              <div className="home-container">
-                <NavLink to="/countries-database/"><img src={home} alt="home" className="home" /></NavLink>
-              </div>
               <div className="flag-containerd">
                 <img src={countrie.flags} alt={countrie.alt} className="flagd" />
                 <div>
@@ -41,16 +38,19 @@ function DetailsPage() {
                 Continent:
                 {' '}
                 {countrie.continent}
+                <NavLink to="/countries-database/"><img src={back} alt="home" className="home" /></NavLink>
               </h2>
               <h2 className="country-information">
                 Capital:
                 {' '}
                 {countrie.capital}
+                <NavLink to="/countries-database/"><img src={back} alt="home" className="home" /></NavLink>
               </h2>
               <h2 className="country-information light">
                 Area:
                 {' '}
                 {countrie.area}
+                <NavLink to="/countries-database/"><img src={back} alt="home" className="home" /></NavLink>
               </h2>
             </div>
           ),

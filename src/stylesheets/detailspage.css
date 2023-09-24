@@ -5,16 +5,15 @@
   align-items: center;
 }
 
-.home-containe {
-  position: relative;
-}
-
 .home {
-  width: 100px;
-  height: 100px;
-  position: absolute;
+  width: 25px;
+  height: 25px;
   left: 90%;
   top: 4%;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  padding: 1%;
+  margin-right: 20px;
 }
 
 .flag-containerd {
@@ -42,6 +41,9 @@
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   padding: 10px 0 10px 10px;
   font-size: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .light {
