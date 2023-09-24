@@ -18,7 +18,7 @@ test('renders MainPage component', () => {
   );
 });
 
-test('renders CountiresItem component', () => {;
+test('renders CountiresItem component', () => {
   render(
     <Provider store={store}>
       <CountiresItem CountryClas="country-container" />
