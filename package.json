@@ -22,7 +22,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!axios)/\"",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build npm start",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "jest": {
