@@ -21,7 +21,7 @@ function CountiresItem({ CountryClas }) {
     (acountrie) => acountrie.name === 'Canada'
       || acountrie.name === 'United Kingdom'
       || acountrie.name === 'Japan'
-      || acountrie.name === 'Australia'
+      || acountrie.name === 'Germany'
       || acountrie.name === 'Mexico'
       || acountrie.name === 'Colombia',
   );
