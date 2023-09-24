@@ -1,3 +1,41 @@
+<a name="readme-top"></a>
+
+<div align="center">
+  <img src="https://cdn-icons-png.flaticon.com/128/921/921490.png" alt="logo" width="140"  height="auto" />
+  <br/>
+  <h3><b>Countries Stats</b></h3>
+
+</div>
+
+# 📗 Table of Contents
+
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+- [💻 Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#triangular_flag_on_post-deployment)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [📝 License](#license)
+
+<!-- PROJECT DESCRIPTION -->
+
+# Countries Stats<a name="about-project"></a>
+
+It is an application that obtains country data from the API https://restcountries.com where it shows by default 6 countries and you can see the details of that country, you can also search for countries by their name that will automatically change the first letter to capital letters to Filtering in the API database automatically hides the 6 example countries and shows in real time those that match the search with their respective button to view details.
+
+You will create an simplified version of it that allows you to:
+
+- Display a list of 6 countries
+- Search country by name
+- See details of a country
+## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -77,7 +115,9 @@ If you like this project, you can give a ⭐️ for this repository.
 <!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
-I want to thank Nelson Sakwa on Behance for the Original design idea<br>
+I want thank to  Nelson Sakwa on Behance for the Original design<br>
+
+I want to thank for pressing  https://www.freepik.es/ icons for free. <br>
 
 I would like to thank Microverse for giving me this wonderful opportunity to work on this project<br>
 
